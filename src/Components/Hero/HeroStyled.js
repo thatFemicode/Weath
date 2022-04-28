@@ -10,6 +10,9 @@ export const HeroStyled = styled.section`
   @media (max-width: ${({ theme }) => theme.images}) {
     padding: 1rem;
   }
+  @media (max-width: ${({ theme }) => theme.make}) {
+    padding: 0.5rem;
+  }
   .main {
     display: flex;
     justify-content: space-between;
@@ -55,7 +58,7 @@ export const HeroStyled = styled.section`
         @media (max-width: ${({ theme }) => theme.make}) {
           font-size: 2rem;
         }
-        @media (max-width: ${({ theme }) => theme.mobil}) {
+        @media (max-width: ${({ theme }) => theme.se}) {
           font-size: 1.5rem;
         }
       }
@@ -90,6 +93,10 @@ export const HeroStyled = styled.section`
         }
         @media (max-width: ${({ theme }) => theme.images}) {
           top: 150px;
+        }
+        @media (max-width: ${({ theme }) => theme.mobil}) {
+          top: 100px;
+          right: 50px;
         }
         img {
           @media (max-width: ${({ theme }) => theme.images}) {
@@ -168,6 +175,9 @@ export const HeroStyled = styled.section`
           }
           @media (max-width: ${({ theme }) => theme.images}) {
             font-size: 3.5rem;
+          }
+          @media (max-width: ${({ theme }) => theme.mobil}) {
+            font-size: 3rem;
           }
         }
         .sun {

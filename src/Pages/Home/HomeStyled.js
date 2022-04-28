@@ -10,6 +10,6 @@ export const HomeStyled = styled.main`
     padding-top: 3rem;
   }
   @media (max-width: ${({ theme }) => theme.make}) {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 `;
