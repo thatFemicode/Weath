@@ -18,11 +18,11 @@ const ButtonStyled = styled.button`
   margin-top: 1rem;
   width: 80px;
   height: 80px;
-  @media (max-width: ${({ theme }) => theme.make}) {
-    width: 60px;
-    height: 60px;
-    font-size: 0.8rem;
-    padding: 0.15rem 0.65rem;
+  @media (max-width: ${({ theme }) => theme.images}) {
+    width: 50px;
+    height: 50px;
+    font-size: 0.5rem;
+    padding: 0.15rem 0.2rem;
   }
 `;
 const ItemButton = ({ name }) => {
