@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import CircularButton from "../Button/CircularButton";
 
 const Time = () => {
-  const { currentHour, currentMinute, city, greeting, icon, region } =
+  const { currentHour, currentMinute, city, greeting, icon } =
     useGlobalContext();
   const hour = currentHour === 0 ? 12 : currentHour;
   const minute = currentMinute < 10 ? `0${currentMinute}` : currentMinute;

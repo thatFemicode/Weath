@@ -2,7 +2,15 @@
 
 Express weather application was built using two APIS, a location API and the openweather API. You can use it to get weather details such as temperature, humidity, clouds windspeed etc.
 
-This project was created with [Create React App](https://github.com/facebook/create-react-app).
+## LiveURL:
+
+https://expressweather.netlify.app/
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app) so follow the following steps if you clone or download the zip file to reference project
+
+### npm install
+
+### npm start
 
 ## Home Page Desktop View
 

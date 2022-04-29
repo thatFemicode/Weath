@@ -82,7 +82,7 @@ const AppProvider = ({ children }) => {
       const response = await axios.get(
         `https://api.ipbase.com/v2/info?apikey=${apiKey}&ip=${ip}`
       );
-      console.log(response.data.data.location.city.name);
+      // console.log(response.data.data.location.city.name);
       const { data } = response.data;
       setLocation(data.location.city.name);
       setCity(data.location.city.name);
@@ -98,7 +98,7 @@ const AppProvider = ({ children }) => {
         getCurrentTime();
       }, 1000);
     }
-  }, [currentHour, showGreeting]);
+  }, [currentHour, showGreeting, ip]);
 
   return (
     <AppContext.Provider
