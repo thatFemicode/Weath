@@ -17,6 +17,7 @@ const AppProvider = ({ children }) => {
   const [region, setRegion] = useState(null);
   const [city, setCity] = useState(null);
   const [error, setError] = useState(null);
+  const [ip, setIp] = useState("");
   const greetings = {
     morning: {
       label: "morning",
@@ -73,10 +74,19 @@ const AppProvider = ({ children }) => {
   );
   useEffect(() => {
     const fetchLocation = async () => {
-      const response = await axios.get("https://freegeoip.app/json/");
-      setLocation(response.data.city);
-      setCity(response.data.city);
-      setRegion(response.data.region_code);
+      const res = await axios.get("https://worldtimeapi.org/api/ip");
+      const ipAddress = res.data.client_ip;
+      setIp(ipAddress);
+      const apiKey = process.env.REACT_APP_API2_KEY;
+      // const response = await axios.get(`https://freegeoip.app/json/${ip}`);
+      const response = await axios.get(
+        `https://api.ipbase.com/v2/info?apikey=${apiKey}&ip=${ip}`
+      );
+      console.log(response.data.data.location.city.name);
+      const { data } = response.data;
+      setLocation(data.location.city.name);
+      setCity(data.location.city.name);
+      setRegion(data.timezone.id);
     };
     fetchLocation();
     let mounted = true;

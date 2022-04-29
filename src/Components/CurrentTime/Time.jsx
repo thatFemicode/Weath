@@ -41,9 +41,7 @@ const Time = () => {
           </h2>
         </div>
       )}
-      <h3>
-        in {city ? city : "LAGOS"}, {region ? region : "LAG"}
-      </h3>
+      <h3>in {city}</h3>
       <div className="button">
         <CircularButton name={"home"} />
       </div>

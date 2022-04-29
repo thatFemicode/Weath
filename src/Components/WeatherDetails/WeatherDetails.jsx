@@ -18,7 +18,7 @@ const WeatherDetails = () => {
       <div className="weather-content">
         <div className="details">
           {loading ? (
-            "jdjd"
+            "Loading..."
           ) : (
             <div className="top">
               <div className="top-main">
@@ -28,7 +28,9 @@ const WeatherDetails = () => {
                 <div className="description">
                   {weather.weather ? (
                     <p>Sky: {weather.weather[0].main}</p>
-                  ) : null}
+                  ) : (
+                    <p>City not found</p>
+                  )}
                 </div>
               </div>
             </div>

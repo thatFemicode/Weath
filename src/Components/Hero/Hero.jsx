@@ -32,7 +32,6 @@ const Hero = () => {
   };
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.1, onComplete: startAnimation });
-
     tl.from(left, {
       duration: 1.2,
       opacity: 0,
